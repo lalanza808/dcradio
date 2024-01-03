@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <!-- Post Content Column -->
+    <div class="col-lg-12">
+      <!-- Title -->
+      <h1 class="mt-4" style="margin-bottom: 2rem;">
+        {{ site_name }}
+      </h1>
+      <p>install</p>
+      <a target=_blank href="https://discord.com/oauth2/authorize?client_id={{ settings.discord_client_id }}&permissions=3072&scope=messages.read&response_type=code&redirect_uri=https%3A%2F%2F{{ settings.icecast2_hostname }}">Install to Discord</a>
+      <hr>
+    </div>
+  </div>
+</div>
+
+{% if ENABLE_SEARCH_ROUTE %}
+<script src="static/search.js"></script>
+{% endif %}
+
+{% endblock %}
